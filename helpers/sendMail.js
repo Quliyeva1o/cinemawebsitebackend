@@ -21,7 +21,7 @@ async function sendVerifyEmail(email, token) {
     to: email,
     subject: "Verify your Account (Hoyts Cinema site)",
     text: "That was easy!",
-    html: `Click <b style="color:red;">here</b> to verify your account: http://localhost:5050/api/verify/${token}`,
+    html: `Click <b style="color:red;">here</b> to verify your account: https://back-end-steel-pi.vercel.app/api/verify/${token}`,
   };
 
   await transporter.sendMail(mailData);
