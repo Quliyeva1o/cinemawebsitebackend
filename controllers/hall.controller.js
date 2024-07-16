@@ -64,8 +64,8 @@ const hall_controller = {
     try {
       const hall = new HallModel(req.body);
       if (req.files &&req.files.img && req.files.coverImg) {
-        hall.img = "http://localhost:5050/uploads/" +  req.files.img[0].filename;
-        hall.coverImg = "http://localhost:5050/uploads/" +  req.files.coverImg[0].filename;
+        hall.img = "https://back-end-steel-pi.vercel.app/uploads/" +  req.files.img[0].filename;
+        hall.coverImg = "https://back-end-steel-pi.vercel.app/uploads/" +  req.files.coverImg[0].filename;
       }
       await hall.save();
       res.status(201).json({

@@ -65,8 +65,8 @@ const event_controller = {
       const event = new EventModel(req.body);
       console.log(req.files);
       if (req.files &&req.files.img && req.files.coverImg) {
-        event.img = "http://localhost:5050/uploads/" + req.files.img[0].filename;
-        event.coverImg = "http://localhost:5050/uploads/" + req.files.coverImg[0].filename;
+        event.img = "https://back-end-steel-pi.vercel.app/uploads/" + req.files.img[0].filename;
+        event.coverImg = "https://back-end-steel-pi.vercel.app/uploads/" + req.files.coverImg[0].filename;
       }
       await event.save();
       res.status(201).json({

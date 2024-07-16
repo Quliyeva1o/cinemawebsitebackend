@@ -91,8 +91,8 @@ const movie_controller = {
       const movie = new MovieModel(req.body);
 
       if (req.files && req.files.bgImg && req.files.coverImg) {
-        const bgImgPath = "http://localhost:5050/uploads/" + req.files.bgImg[0].filename;
-        const coverImgPath = "http://localhost:5050/uploads/" + req.files.coverImg[0].filename;
+        const bgImgPath = "https://back-end-steel-pi.vercel.app/uploads/" + req.files.bgImg[0].filename;
+        const coverImgPath = "https://back-end-steel-pi.vercel.app/uploads/" + req.files.coverImg[0].filename;
         movie.bgImg = bgImgPath;
         movie.coverImg = coverImgPath;
       }
