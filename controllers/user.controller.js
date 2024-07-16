@@ -160,7 +160,7 @@ const user_controller = {
       const user = await UserModel.findOne({ email: email });
       if (user) {
         await UserModel.findByIdAndUpdate(user._id, { isVerified: true });
-        res.redirect("http://localhost:5173/");
+        res.redirect("https://cinema-website-7p8x.vercel.app/");
         return;
       } else {
         res.send({

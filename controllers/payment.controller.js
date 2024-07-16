@@ -31,7 +31,7 @@ const PaymentController = {
         payment_method_types: ['card'],
         line_items: lineItems,
         mode: 'payment',
-        success_url: `http://localhost:5173/success`,
+        success_url: `https://cinema-website-7p8x.vercel.app/success`,
       });
 
       res.status(200).json({
